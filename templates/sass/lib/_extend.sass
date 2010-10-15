@@ -1,12 +1,5 @@
 // extend.sass | LIBRARY @EXTEND CLASSES
 
-// Clearing Floats
-   ----------------------------------------------
-   .clear     =>  For non-floating element immediately below a floating element.
-
-   .clearfix  =>  For floating children inside a parent.
-                  Class goes on parent holding floating children.
-
 // Use all of these classes with the @extend option
 .zoom
   :zoom                       1
@@ -44,7 +37,7 @@
   :content                    ""
 
 // Replacing text with a background image
-.hide-text, .h
+.h
   @extend                     .block
   @extend                     .hidden
   :font-size                  0
@@ -53,35 +46,35 @@
   :.text-transform            capitalize
 
 // Reset some basic styling
-.reset, .r
+.r
   :border                     0
   :margin                     0
   :padding                    0
 
 // Consolidate fonts. Works with font $variables in lib/variables.
-.font_x-small
+.x-small
   :font-size                  $x-small
 
-.font_small
+.small
   :font-size                  $small
 
-.font_medium
+.medium
   :font-size                  $medium
 
-.font_x-medium
+.x-medium
   :font-size                  $x-medium
 
-.font_large
+.large
   :font-size                  $large
 
-.font_x-large
+.x-large
   :font-size                  $x-large
 
-.font_xx-large
+.xx-large
   :font-size                  $xx-large
 
-.font_huge
+.huge
   :font-size                  $huge
 
-.font_x-huge
+.x-huge
   :font-size                  $x-huge
