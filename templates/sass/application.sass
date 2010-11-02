@@ -1,7 +1,8 @@
-// DEFAULT LIBRARIES
+// DEFAULT LIBRARIES + BOOTSTRAPPING
 @import lib/mixins
 @import lib/variables
-@import styles/variables
+// User global variables must be loaded here for proper scoping.
+@import styles/variables 
 @import setup
 @import lib/reset
 @import lib/extend
@@ -11,5 +12,3 @@
 @import styles/mixins
 @import styles/common
 @import styles/template
-
-
