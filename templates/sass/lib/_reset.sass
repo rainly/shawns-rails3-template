@@ -14,10 +14,10 @@ h1, h2, h3, h4, h5, h6
   :line-height                1
 
 body, blockquote, button, dd, h1, h2, h3, h4, h5, h6, input, menu, ol, select, textarea, ul
-  :margin                     0
+  @extend                     .xmargin
 
-body, fieldset, legend, menu, ol, ul
-  :padding                    0
+body, button, fieldset, legend, menu, ol, ul
+  @extend                     .xpadding
 
 address, article, aside, audio, canvas, dd, dt, figcaption, figure, footer, header, hgroup, img, label, menu, nav, q, section, summary, textarea, video
   @extend                     .block
@@ -51,7 +51,7 @@ input, select, td, th
   :vertical-align             middle
 
 fieldset, input[type="checkbox"], input[type="radio"]
-  :border                     0
+  @extend                     .xborder
 
 input[type="radio"] + label, input[type="checkbox"] + label
   :display                    inline
@@ -83,7 +83,7 @@ a
   &:hover, &:focus
     :border-bottom            0
   img
-    :border                   0
+    @extend                   .xborder
 
 table
   :border
@@ -172,7 +172,7 @@ input
     :content                  " (" attr(href) ") "
 
   abbr[title], dfn[title]
-    :border                   0
+    @extend                   .xborder
     &:after
       :content                " (" attr(title) ") "
 
@@ -194,7 +194,7 @@ input
 // Slot in the variables
 textarea
   +box-sizing(                border-box)
-  
+
 body, button, input, option, select, textarea
   :font-family                $font-family
 
