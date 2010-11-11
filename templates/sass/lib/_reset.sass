@@ -41,7 +41,7 @@ abbr[title], dfn[title]
 a, ins
   :text-decoration            none
 
-button, input[type="checkbox"], input[type="radio"], input[type="submit"], input[type="button"], label, select
+a *, button, input[type="checkbox"], input[type="radio"], input[type="submit"], input[type="button"], label, select
   :cursor                     pointer
 
 caption, legend, td, th
@@ -135,12 +135,11 @@ input
 
 
 // Basic handhelds, iPhone, iPad, Android, etc
-@media handheld, handheld and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (min-device-width: 768px) and (max-device-width: 1024px)
-  *
-    :-webkit-box-shadow       none          !important
+@media handheld, handheld and (max-width: 480px), only screen and (max-device-width: 480px)
+  article, div, section
     :float                    none          !important
-    :text-shadow              none          !important
-
+    
+@media handheld, handheld and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (min-device-width: 768px) and (max-device-width: 1024px)
   html
     :-ms-text-size-adjust     none
     :-webkit
@@ -154,6 +153,7 @@ input
 
   a
     :-webkit-tap-highlight-color  rgba(0,0,0,0)
+
 
 // Basic styles for printing
 @media print
