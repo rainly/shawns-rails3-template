@@ -77,6 +77,9 @@ sub
 sup
   :vertical-align             super
 
+sub, sup
+  @extend                     .x-small
+
 a
   :border-bottom              1px solid
   :outline                    0
@@ -138,7 +141,7 @@ input
 @media handheld, handheld and (max-width: 480px), only screen and (max-device-width: 480px)
   article, div, section
     :float                    none          !important
-    
+
 @media handheld, handheld and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (min-device-width: 768px) and (max-device-width: 1024px)
   html
     :-ms-text-size-adjust     none
@@ -172,7 +175,7 @@ input
     :content                  " (" attr(href) ") "
 
   abbr[title], dfn[title]
-    @extend                   .xborder
+    :border                   0
     &:after
       :content                " (" attr(title) ") "
 
