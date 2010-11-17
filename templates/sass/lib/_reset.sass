@@ -153,9 +153,13 @@ input
   body
     :-webkit-text-stroke      0 black
     :font-size                80%
+    :word-wrap                break-word  
 
   a
     :-webkit-tap-highlight-color  rgba(0,0,0,0)
+  
+  img
+    :max-width                100%  
 
 
 // Basic styles for printing
@@ -167,6 +171,8 @@ input
 
   body
     :font-size                12pt          !important
+    :letter-spacing           0.2pt
+    :word-spacing             1.1pt
 
   a:after, abbr[title]:after
     :font-size                75%
