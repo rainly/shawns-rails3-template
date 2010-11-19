@@ -8,7 +8,7 @@ require "bundler"
 
 # START THIS THING
 puts  "\n========================================================="
-puts  " SHAWN'S RAILS 3 TEMPLATE - [v1.6.9] ".yellow.bold
+puts  " SHAWN'S RAILS 3 TEMPLATE - [v1.7.1] ".yellow.bold
 puts  "=========================================================\n\n"
 
 # REMOVE FILES
@@ -27,6 +27,7 @@ puts  "---------------------------------------------------------"
 # ADD FILES
 puts  " Adding useful junk ... ".green
 puts  "---------------------------------------------------------"
+run   "cat #{@path}application_helper.rb > app/helpers/application_helper.rb"
 run   "cp #{@path}application.html.haml app/views/layouts"
 run   "cp -r #{@path}images public/"
 puts  "---------------------------------------------------------"

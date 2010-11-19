@@ -11,19 +11,21 @@
     <!--<![endif]-->
     /[if lte IE 7]
       %link{ :rel => 'stylesheet', :href => 'http://universal-ie6-css.googlecode.com/files/ie6.0.3.css' }
-    /[if IE]
+    /[if lte IE 8]
       %script{ :src => 'http://html5shiv.googlecode.com/svn/trunk/html5.js' }
 
-  %body{ :class => "#{params[:controller]} #{params[:controller]}_#{params[:action]}" }
+  %body{ :class => body_classes }
 
     = yield
 
     <!--[if ! lte IE 7]><!-->
-    %script{ :src => 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js' }
+    %script{ :src => 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js' }
+    %script{ :src => 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js' }
     %script{ :src => '/javascripts/application.js' }
     <!--<![endif]-->
     /[if lte IE 8]
-      //%script{ :src => 'http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js' }
+      %script{ :src => 'http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js' }
 
-    / Google Analytics | Don't forget to include your tracking number!!!!
-    %script var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-XXXXX-X']); _gaq.push(['_trackPageview']); (function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);})();
+    / Google Analytics Tracking #
+    = google_analytics 'UA-XXXXXXXX-X'
+
